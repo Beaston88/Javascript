@@ -55,8 +55,49 @@ let booleanIsLoggedIn = Boolean(isLoggedIn)
 console.log(booleanIsLoggedIn) // O/p : true for 1  and string and false for 0
 */
 
+/*
 // Number to string 
 let num = 65
 let stringValueOfNum = String (num)
 console.log(stringValueOfNum)
 console.log(typeof stringValueOfNum) 
+*/
+
+
+// **************************************** Operations *****************************************
+let value = 3
+let negValue = -value
+// console.log(negValue+" "+value)
+
+//Operations
+// console.log(2+2)
+// console.log(2-2)
+// console.log(2*2)
+// console.log(2/2)
+// console.log(2**2)
+// console.log(2%2)
+
+// Tricky Conversions on String
+// let str1 = "Hello"
+// let str2 = " Ankit"
+// let str3 = str1 + str2
+// console.log(str3)
+
+// console.log("1" + 2)
+// console.log(1 + "2")
+// console.log("1" + 2 + 2)
+// console.log(1 + 2 + "2")
+
+// console.log(true)
+// console.log(+true)
+// console.log(+"");
+
+// let num1,num2,num3
+// num
+1 = num2 = num3 = 2*2
+
+let gameScore = 100;
+gameScore++;
+console.log(gameScore)
+++gameScore
+console.log(gameScore)
