@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121;">
+    
+</body>
+<script>
+    const requestUrl = "https://api.github.com/users/Beaston88";
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET',requestUrl); // Yahan tak open nhi hua
+
+    xhr.onreadystatechange = function(){
+        console.log(xhr.readyState);
+        if(xhr.readyState === 4){
+            const data = JSON.parse(this.responseText) // Jab v url se data aata hai toh string format me aata hai so convert kar dete hai.
+            console.log(typeof data);
+            console.log(data.following);
+        }
+    }
+    xhr.send() //ab hua
+</script>
+</html>
