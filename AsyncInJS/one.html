@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai Pe Charcha</h1>
+    <button id="stop">stop</button>
+</body>
+<script>
+    // One way
+    // setTimeout(function(){
+    //     console.log("Ankit");
+    // },2000)
+
+    // 2nd way
+    const Ankit = function(){
+        console.log("Ankit");
+    }
+    // setTimeout(Ankit,2000);
+
+    const changeText = function(){
+    document.querySelector('h1').innerHTML = "Best JS series"
+    }
+    const text = setTimeout(changeText,2000);
+    // clearTimeout(text);
+
+    document.querySelector('#stop').addEventListener('click',function(){
+        clearTimeout(text);
+        console.log("Stopped");
+    },false)
+
+</script>
+</html>
