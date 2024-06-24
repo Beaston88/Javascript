@@ -1,0 +1,42 @@
+body{
+    background-color: rgba(186, 116, 23, 0.334);
+    color: black;
+    text-align: center;
+}
+nav{
+    color: beige;
+    background-color: rgb(10, 5, 0);
+    height: 40px;
+    padding-top: 20px;
+    font-size: large;
+
+}
+.submitField{
+    background-color: aquamarine;
+    width: 160px;
+    margin-top: 20px;
+    height: 30px;
+}
+.guessField{
+    background-color: lightgrey;
+    height: 33px;
+    width: 230px;
+    margin-top: 15px;
+    font-size: large;
+    text-align: center;
+}
+#guess{
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.resultPass{
+    border: 3px double darkslategrey;
+    margin-top: 15px;
+}
+.para{
+    border: groove 5px black;
+    margin-top: 2px;
+    font-size: large;
+    color: brown;
+}
