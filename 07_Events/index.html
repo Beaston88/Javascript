@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events</title>
+</head>
+<body style="background-color: #414141;color: aliceblue;">
+    <h2>Amazing Images</h2>
+    <div>
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="first.png" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="second.png" alt=""></li>
+            <li><img width="200px" id="river" src="third.png" alt=""></li>
+            <li><img width="200px" id="owl" src="fourth.png" alt=""></li> <!-- We can use onclick directly on button. onclick="alert('owl')" -->
+            <a href="https://www.google.com" style="color: aliceblue;" id="google">Welcome to Google</a>
+        </ul>
+    </div>
+</body>
+<script>
+    // document.getElementById('owl').onclick = function(){
+    //     alert("Owl ko kisne chhuaaa ? ~.~ ")
+    // }
+
+    //syntax to write a event
+    // document.getElementById('owl').addEventListener('click',function(){},false) // There's always a third parameter which is by default false. So we generally ignore it. Event Propagation
+
+    // attachEvent() - used earlier
+    // jQuery - onEvent()
+
+    
+    // These are important.
+    // type, timpstamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget,
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keyCode
+
+    // document.getElementById('owl').addEventListener('click',function(e){
+    //     // alert("owl clicked again !!")
+    //     console.log(e);
+    // },false)
+
+    // Event Propagation - 2 types 
+    // 1st - Event Bubbling (lower to Upper) (mostly use)
+        // Example : Notice both are initially false;
+        // document.getElementById('images').addEventListener('click',function(e){
+        //     console.log("Clicked inside the ul");
+        // },false)
+
+        // document.getElementById('owl').addEventListener('click',function(e){
+        //     console.log("Owl clicked");
+        // },false)
+
+    // 2nd - Event Capturing (higher to lower) (asked sometimes)
+        // Example :
+        // document.getElementById('images').addEventListener('click',function(e){
+        //     console.log("Clicked inside the ul");
+        // }, true)
+
+        // document.getElementById('owl').addEventListener('click',function(e){
+        //     console.log("Owl clicked");
+        // }, true)
+
+    // If we want to stop propagation on one event then 
+    // document.getElementById('images').addEventListener('click',function(e){
+    //    console.log("Clicked inside the ul");
+    // },false)
+    // document.getElementById('owl').addEventListener('click',function(e){
+    //    console.log("Owl clicked");
+    //    e.stopPropagation()
+    // },false)    
+
+    // document.getElementById('google').addEventListener('click',function(e){
+    //     // e.preventDefault()
+    //     e.stopPropagation()
+    //     console.log('Google clicked')
+    // },false)
+
+    // Whenever we click a pic it should be removed
+    document.querySelector('#images').addEventListener('click',function(e){
+        console.log(e.target.parentNode);// Isse pura parent delete ho rha tha
+        // console.log(e.target.tagName); // It will give tagname 
+        if(e.target.tagName==='IMG'){
+            // console.log();
+            let removeIt = e.target.parentNode
+            removeIt.remove()
+        }
+        // removeIt.parentNode.removeChild(removeIt)
+    },false)
+</script>
+</html>
